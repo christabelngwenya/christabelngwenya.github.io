@@ -44,7 +44,7 @@ const Skills = () => {
       skills: [
         "MySQL/PostgreSQL",
         "Git",
-        "Virtualization",
+        "Cloud Computing",
         "Project Management"
       ]
     }

@@ -7,22 +7,22 @@ const About = () => {
   const educationItems = [
     {
       degree: "BSc in Computer Systems Engineering",
-      school: "National University of Science and Technology",
-      years: "2020 - 2024",
+      school: "Midlands State University",
+      years: "2021- 2025",
       icon: <FaGraduationCap size={24} />,
       details: "Focused on computer systems, networking, and software development"
     },
     {
       degree: "A-Level",
       school: "Sikhulile High School",
-      years: "2018 - 2019",
+      years: "2019 - 2020",
       icon: <FaSchool size={24} />,
       details: "Pure Mathematics, Physics, Chemistry, and Mechanical Mathematics (14 points)"
     },
     {
       degree: "O-Level",
       school: "Sikhulile High School",
-      years: "2014 - 2017",
+      years: "2015 - 2018",
       icon: <FaBook size={24} />,
       details: "9 subjects with 4As, 3Bs, and 2Cs"
     }
