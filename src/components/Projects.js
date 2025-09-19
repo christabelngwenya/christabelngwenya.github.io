@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaCertificate, FaWater, FaExclamationTriangle, FaLeaf } from 'react-icons/fa';
+import { FaShieldAlt, FaCertificate, FaWater, FaExclamationTriangle, FaHome } from 'react-icons/fa';
 
 const Projects = () => {
   const fadeInUp = {
@@ -15,72 +15,65 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Safe Sphere",
-      description: "A comprehensive web-based safety application for female students, addressing gender-based violence and harassment in tertiary institutions.",
+      title: "Safe Sphere – IoT-Based Safety & Wellness Platform",
+      description: "A 1st Place ($1000 USD) winning hackathon project designed to improve female student safety and mental health at universities in Zimbabwe. I was responsible for full-stack development and contributed to hardware engineering.",
       icon: <FaShieldAlt size={40} />,
       features: [
-        "Counseling Services Booking",
-        "Anonymous Abuse Reporting",
-        "Whistleblowing Portal",
-        "Panic Button Integration",
-        "Privacy-focused Design"
+        "Secure, anonymous incident reporting forms",
+        "Counseling services booking system",
+        "Interactive mental health self-assessment tool",
+        "Real-time 'Virtual Walk Companion' location sharing",
+        "Hardware panic button with GPS location transmission"
       ],
-      technologies: ["React.js + vite", "Node.js", "PostgreSQL", "JavaScript"]
+      technologies: ["React.js", "Node.js", "PostgreSQL", "IoT Hardware (Microcontrollers)"]
     },
     {
       title: "Digital Certificate Issuance System",
-      description: "A web-based platform for city councils to generate and manage digital certificates, replacing outdated handwritten systems.",
+      description: "A centralized web-based platform for city councils to digitally manage and issue business shop licenses, automating the process to replace error-prone handwritten methods and reduce fraud.",
       icon: <FaCertificate size={40} />,
       features: [
-        "Automated Certificate Templates",
-        "Digital Record Keeping",
-        "Fraud Prevention",
-        "Efficient Processing"
+        "Automated storage of shop owner details",
+        "Payment tracking system",
+        "Generation of printable, verifiable certificates",
+        "Centralized digital record management"
       ],
-      technologies: ["Laravel", "PHP", "mysql", "HTML5", "CSS3", "JavaScript"]
+      technologies: ["PHP", "Laravel", "MySQL"]
     },
     {
       title: "Smart Water Management System",
-      description: "An IoT-based system for proactive leak detection and real-time water management with data visualization.",
+      description: "A complete IoT system designed to detect water leaks in under 5 seconds (a process that previously took weeks), helping to reduce water loss in urban areas.",
       icon: <FaWater size={40} />,
       features: [
-        "Real-time Monitoring",
-        "Leak Detection Alerts",
-        "Data Visualization Dashboard",
-        "Maintenance Response System"
+        "Real-time leak detection with automatic valve control",
+        "Admin dashboard with interactive graphs and maps",
+        "Public portal for leak reporting and status tracking",
+        "Automated email alerts to admin team upon leak detection"
       ],
-      technologies: ["react.js", "Node.js", "MySQL","Leaflet","Chart.js", "Microcontrollers", "Sensors"]
+      technologies: ["Arduino (C++)", "ESP32", "IoT Sensors", "React.js", "Node.js", "Express.js", "MySQL", "REST APIs"]
     },
     {
-      title: "Web-Based Leak Reporting Form",
-      description: "A responsive web application for community members to report water leaks and maintenance issues.",
+      title: "AI-Powered Smart Traffic Management System",
+      description: "An AI model developed to optimize traffic flow by simulating real-time adaptive signal control for intersections in Zimbabwean cities like Harare.",
       icon: <FaExclamationTriangle size={40} />,
       features: [
-        "Responsive Design",
-        "Google Sheets Integration",
-        "Report Tracking System",
-        "Citizen-Government Collaboration"
+        "Vehicle detection and counting using YOLOv8 computer vision",
+        "Dynamic signal timing via a reinforcement learning algorithm",
+        "Flask web dashboard for real-time monitoring and reporting",
+        "Scalable solution to reduce urban congestion"
       ],
-      technologies: ["React.js", "Node.js", "MYSQL"]
+      technologies: ["Python", "YOLOv8", "OpenCV", "Flask", "Reinforcement Learning"]
     },
     {
-      title: "EcoGuard",
-      description: "A community-powered environmental monitoring platform that uses real-time reporting and gamification to address water waste, pollution, and resource depletion.",
-      icon: <FaLeaf size={40} />,
+      title: "Biometric Home Surveillance System",
+      description: "An affordable, automated home security system prototype that uses facial recognition to control access and enhance household safety.",
+      icon: <FaHome size={40} />,
       features: [
-        "GPS-tagged issue reporting (leaks/dumping/drains)",
-        "Public dashboard with live issue tracking",
-        "Gamification (badges, leaderboards, impact stats)",
-        "Water stress zone mapping (color-coded alerts)",
-      
-        "Authority/NGO response tracking"
+        "Real-time face detection and identification using OpenCV",
+        "Classification of individuals as authorized or unauthorized",
+        "Automatic image capture of unauthorized persons",
+        "Secure email alert system with photo attachment via Gmail API"
       ],
-      technologies: [
-        "React.js",
-        "Node.js",
-        "MYSQL",
-        "Leaflet",
-      ]
+      technologies: ["Python", "OpenCV", "Gmail API", "OAuth 2.0", "Haar Cascades"]
     }
   ];
 
@@ -246,4 +239,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
