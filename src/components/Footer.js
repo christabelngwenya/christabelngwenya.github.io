@@ -11,7 +11,7 @@ const Footer = () => {
     },
     {
       icon: <FaLinkedin size={24} />,
-      url: 'https://linkedin.com/in/christabelngwenya',
+      url: 'https://www.linkedin.com/in/christabel-ngwenya-705330261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       label: 'LinkedIn',
     },
 
@@ -25,6 +25,7 @@ const Footer = () => {
   return (
     <Box
       component="footer"
+      id="contact"
       sx={{
         py: 4,
         backgroundColor: 'primary.main',

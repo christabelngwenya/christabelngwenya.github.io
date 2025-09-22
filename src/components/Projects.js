@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaCertificate, FaWater, FaExclamationTriangle, FaLeaf } from 'react-icons/fa';
+import { FaShieldAlt, FaCertificate, FaWater, FaLaptopCode, FaTrafficLight, FaHome } from 'react-icons/fa';
 
 const Projects = () => {
   const fadeInUp = {
@@ -15,72 +15,79 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Safe Sphere",
-      description: "A comprehensive web-based safety application for female students, addressing gender-based violence and harassment in tertiary institutions.",
+      title: "Portfolio Website",
+      description: "Designed and deployed a responsive single-page application showcasing my skills and projects. Demonstrates modern front-end development, version control with Git, and CI/CD via GitHub Actions deployed to GitHub Pages.",
+      icon: <FaLaptopCode size={40} />,
+      features: [
+        "Responsive SPA (React)",
+        "Hosted on GitHub Pages",
+        "CI/CD with GitHub Actions",
+        "Version control with Git"
+      ],
+      technologies: ["React", "CSS", "GitHub Pages", "GitHub Actions"]
+    },
+    {
+      title: "AI-Powered Smart Traffic Management System",
+      description: "Researched and developed an AI model to optimize traffic flow, simulating real-time adaptive signal control for Zimbabwean intersections (e.g., Harare).",
+      icon: <FaTrafficLight size={40} />,
+      features: [
+        "YOLOv8 for vehicle detection and counting",
+        "Reinforcement Learning for dynamic signal timing",
+        "Flask dashboard for real-time monitoring",
+        "Scalable approach to reduce congestion"
+      ],
+      technologies: ["Python", "YOLOv8", "OpenCV", "Flask", "Reinforcement Learning"]
+    },
+    {
+      title: "Safe Sphere – IoT-Based Safety & Wellness Platform",
+      description: "Full-stack developer on the team that won 1st Place ($1000) at the Pada Platform hackathon (Harare, Mar 2024). Platform improves female student safety and wellness at universities in Zimbabwe.",
       icon: <FaShieldAlt size={40} />,
       features: [
-        "Counseling Services Booking",
-        "Anonymous Abuse Reporting",
-        "Whistleblowing Portal",
-        "Panic Button Integration",
-        "Privacy-focused Design"
+        "Anonymous incident reporting",
+        "Counseling booking & mental health self-assessment",
+        "Virtual Walk Companion (real-time location sharing)",
+        "Hardware panic button sending GPS to campus security",
+        "Privacy-first design"
       ],
-      technologies: ["React.js + vite", "Node.js", "PostgreSQL", "JavaScript"]
+      technologies: ["React", "Node.js", "PostgreSQL", "IoT (Microcontrollers)"]
     },
     {
       title: "Digital Certificate Issuance System",
-      description: "A web-based platform for city councils to generate and manage digital certificates, replacing outdated handwritten systems.",
+      description: "Centralized web platform for city councils to digitally manage and issue business shop licenses, replacing error-prone handwritten processes and reducing fraud.",
       icon: <FaCertificate size={40} />,
       features: [
-        "Automated Certificate Templates",
-        "Digital Record Keeping",
-        "Fraud Prevention",
-        "Efficient Processing"
+        "Automated certificate generation",
+        "Owner record management & payment tracking",
+        "Verifiable printable certificates",
+        "Fraud reduction"
       ],
-      technologies: ["Laravel", "PHP", "mysql", "HTML5", "CSS3", "JavaScript"]
+      technologies: ["Laravel", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript"]
     },
     {
       title: "Smart Water Management System",
-      description: "An IoT-based system for proactive leak detection and real-time water management with data visualization.",
+      description: "End-to-end IoT system to reduce urban water loss with sub-5-second leak detection, realtime dashboards, maps, and automated alerts.",
       icon: <FaWater size={40} />,
       features: [
-        "Real-time Monitoring",
-        "Leak Detection Alerts",
-        "Data Visualization Dashboard",
-        "Maintenance Response System"
-      ],
-      technologies: ["react.js", "Node.js", "MySQL","Leaflet","Chart.js", "Microcontrollers", "Sensors"]
-    },
-    {
-      title: "Web-Based Leak Reporting Form",
-      description: "A responsive web application for community members to report water leaks and maintenance issues.",
-      icon: <FaExclamationTriangle size={40} />,
-      features: [
-        "Responsive Design",
-        "Google Sheets Integration",
-        "Report Tracking System",
-        "Citizen-Government Collaboration"
-      ],
-      technologies: ["React.js", "Node.js", "MYSQL"]
-    },
-    {
-      title: "EcoGuard",
-      description: "A community-powered environmental monitoring platform that uses real-time reporting and gamification to address water waste, pollution, and resource depletion.",
-      icon: <FaLeaf size={40} />,
-      features: [
-        "GPS-tagged issue reporting (leaks/dumping/drains)",
-        "Public dashboard with live issue tracking",
-        "Gamification (badges, leaderboards, impact stats)",
-        "Water stress zone mapping (color-coded alerts)",
-      
-        "Authority/NGO response tracking"
+        "ESP32 + flow sensors; Arduino IDE firmware",
+        "Automatic valve control & alarm on leak detection",
+        "Admin dashboard with graphs/map + public reporting site",
+        "Email notifications to admins on reports"
       ],
       technologies: [
-        "React.js",
-        "Node.js",
-        "MYSQL",
-        "Leaflet",
+        "Arduino (C++)", "ESP32", "IoT Sensors", "React.js", "Node.js", "Express.js", "MySQL", "REST APIs", "Serial Communication"
       ]
+    },
+    {
+      title: "Biometric Home Surveillance System (Facial Recognition)",
+      description: "Affordable automated home security prototype using facial recognition to control access and enhance safety.",
+      icon: <FaHome size={40} />,
+      features: [
+        "Python + OpenCV real-time detection/identification",
+        "Classify authorized vs unauthorized",
+        "Gmail API with 2FA for secure notifications",
+        "Automatic email alert with captured photo on unauthorized access"
+      ],
+      technologies: ["Python", "OpenCV", "Gmail API", "OAuth 2.0", "Haar Cascades"]
     }
   ];
 

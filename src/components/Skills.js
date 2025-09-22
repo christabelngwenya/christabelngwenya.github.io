@@ -50,6 +50,90 @@ const Skills = () => {
     }
   ];
 
+  // Additional categories requested by user (only items not already listed above)
+  skillCategories.push(
+    {
+      title: "Programming & Web Development",
+      icon: <FaCode size={32} />,
+      skills: [
+        "JavaScript",
+        "Express.js",
+        "PHP",
+      ]
+    },
+    {
+      title: "Security & Networking (Advanced)",
+      icon: <FaShieldAlt size={32} />,
+      skills: [
+        "Cybersecurity Fundamentals",
+        "VPN & Firewall Management",
+        "Cisco Networking Basics",
+        "Cisco Packet Tracer",
+      ]
+    },
+    {
+      title: "Data Systems & Monitoring",
+      icon: <FaCloud size={32} />,
+      skills: [
+        "ELK Stack Monitoring",
+        "IoT Security",
+      ]
+    },
+    {
+      title: "DevOps & CI/CD",
+      icon: <FaTools size={32} />,
+      skills: [
+        "GitHub Actions",
+      ]
+    },
+    {
+      title: "AI & Data Science",
+      icon: <FaChartLine size={32} />,
+      skills: [
+        "Machine Learning",
+        "Deep Learning (YOLOv8)",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "Predictive Modeling",
+      ]
+    },
+    {
+      title: "Libraries & Frameworks",
+      icon: <FaTools size={32} />,
+      skills: [
+        "Matplotlib",
+        "Pillow",
+        "TensorFlow",
+        "Chart.js",
+      ]
+    },
+    {
+      title: "Agile & Collaboration",
+      icon: <FaTools size={32} />,
+      skills: [
+        "Scrum",
+        "Jira",
+      ]
+    },
+    {
+      title: "Soft Skills",
+      icon: <FaTools size={32} />,
+      skills: [
+        "Problem Solving",
+        "Team Collaboration",
+      ]
+    },
+    {
+      title: "Documentation & Reporting",
+      icon: <FaTools size={32} />,
+      skills: [
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Microsoft PowerPoint",
+      ]
+    },
+  );
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 

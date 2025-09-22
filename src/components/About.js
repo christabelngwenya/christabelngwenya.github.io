@@ -28,6 +28,60 @@ const About = () => {
     }
   ];
 
+  const certifications = [
+    {
+      title: "Introduction to Data Science",
+      issuer: "Cisco Networking Academy",
+      href: "/online%20certifications/data%20science%20cisco%20certificate.pdf",
+    },
+    {
+      title: "Networking Basics",
+      issuer: "Cisco Networking Academy",
+      href: "/online%20certifications/cisco%20networking%20basics%20certificate.pdf",
+    },
+    {
+      title: "Cyber Security",
+      issuer: "Oxford Home Study Centre",
+      href: "/online%20certifications/certficate%20of%20completion%20for%20cyber%20security%20course.pdf",
+    },
+    {
+      title: "Cybersecurity Foundations",
+      issuer: "LinkedIn Learning",
+      href: "/online%20certifications/CertificateOfCompletion_Cybersecurity%20Foundations.pdf",
+    },
+    {
+      title: "Introduction to Internet of Things",
+      issuer: "Cisco Networking Academy",
+      href: "/online%20certifications/IOT%20%20cisco%20certificate.pdf",
+    },
+    {
+      title: "Developing Machine Learning Solutions",
+      issuer: "AWS",
+      href: "/online%20certifications/developing%20machine%20learning%20solutions%20certificate.pdf",
+    },
+    {
+      title: "Introduction to Machine Learning",
+      issuer: "AWS",
+      href: "/online%20certifications/introduction%20to%20ML%20certificate.pdf",
+    },
+    {
+      title: "Fundamentals of Machine Learning and Artificial Intelligence",
+      issuer: "AWS",
+      href: "/online%20certifications/fundamentals%20of%20ML%20and%20Al%20certificate.pdf",
+    },
+    {
+      title: "Deep Dive with Security: AWS Identity and Access Management (IAM)",
+      issuer: "AWS",
+      // No exact matching filename found; linking to a generic AWS certificate in the folder
+      href: "/online%20certifications/104_3_6464949_1730195180_AWS%20Course%20Completion%20Certificate.pdf",
+    },
+    {
+      title: "Computer Packages Certification",
+      issuer: "Hexco (2018)",
+      href: "",
+    },
+  ];
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
@@ -338,9 +392,104 @@ const About = () => {
             ))}
           </Grid>
         </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeInUp}
+        >
+          <Box id="certifications" sx={{ scrollMarginTop: { xs: '80px', md: '96px' } }}>
+            <Typography
+              variant="h3"
+              sx={{
+                textAlign: 'center',
+                mt: { xs: 8, md: 12 },
+                mb: { xs: 4, md: 6 },
+                fontWeight: 700,
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                color: '#2D3748',
+                letterSpacing: '-0.5px'
+              }}
+            >
+              Certifications
+            </Typography>
+          </Box>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 2,
+              overflowX: 'auto',
+              pb: 1,
+              px: 1,
+              scrollSnapType: 'x mandatory',
+              '&::-webkit-scrollbar': { height: 8 },
+              '&::-webkit-scrollbar-track': { background: 'rgba(0,0,0,0.05)', borderRadius: 4 },
+              '&::-webkit-scrollbar-thumb': { background: 'rgba(107, 70, 193, 0.4)', borderRadius: 4 },
+            }}
+          >
+            {certifications.map((cert, idx) => {
+              const content = (
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 3,
+                    minWidth: 280,
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    borderRadius: '16px',
+                    border: '1px solid rgba(107, 70, 193, 0.15)',
+                    scrollSnapAlign: 'start',
+                    transition: 'transform 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 10px 24px rgba(107, 70, 193, 0.15)'
+                    }
+                  }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: 600, color: '#2D3748', mb: 1 }}>
+                    {cert.title}
+                  </Typography>
+                  <Chip
+                    label={cert.issuer}
+                    sx={{
+                      backgroundColor: 'rgba(107, 70, 193, 0.08)',
+                      color: '#6B46C1',
+                      fontWeight: 500,
+                    }}
+                  />
+                </Paper>
+              );
+
+              return (
+                <Box key={idx} sx={{ flex: '0 0 auto' }}>
+                  {cert.href ? (
+                    <a
+                      href={cert.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none' }}
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    content
+                  )}
+                </Box>
+              );
+            })}
+          </Box>
+        </motion.div>
       </Container>
     </Box>
   );
 };
 
-export default About; 
+export default About;
